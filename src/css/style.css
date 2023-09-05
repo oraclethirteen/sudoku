@@ -1,0 +1,94 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.board {
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.digit {
+  flex: 1 1 48px;
+  border-right: 1px solid black;
+}
+
+.digit:nth-last-child(-n+1) {
+  border-right: none;
+}
+
+.digits {
+  width: 100%;
+  max-width: 450px;
+  min-height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.title {
+  padding-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.mistakes {
+  padding: 1rem;
+  text-align: center;
+  color: coral;
+}
+
+.false {
+  color: coral;
+}
+
+.cell {
+  flex: 1 1 48px;
+  border: 1px solid #e6e9ed;
+  align-items: center;
+}
+
+.cell:nth-child(3n) {
+  border-right-color: black;
+}
+
+.cell:nth-child(9n) {
+  border-right: none;
+}
+
+.cell:has(.question) {
+  background-color:#ededed;
+}
+
+.cell:nth-child(n+19) {
+  border-bottom-color: black;
+}
+
+.block-2:nth-child(-n+45) {
+  border-bottom: none;
+}
+
+.block-3 {
+  border-bottom: none;
+}
+
+.cell:nth-child(n) {
+  border-left: none;
+}
+
+.cell:nth-child(-n+9) {
+  border-top: none;
+}
+
+.cell:nth-child(-n+18) {
+  border-bottom: none;
+}
